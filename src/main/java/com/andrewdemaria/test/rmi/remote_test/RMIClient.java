@@ -9,6 +9,8 @@ public class RMIClient {
 		RMIServerIntf obj = (RMIServerIntf) registry.lookup("RMIServer");
 		System.out.println(obj.getMessage(new User("Ander", "Ruiz")));
 
+		Thread.sleep(10000);
+
 		System.out.println(obj.getMessage(new User("/etc/passwd", "")));
 	}
 }
